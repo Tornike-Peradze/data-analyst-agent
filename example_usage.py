@@ -10,6 +10,10 @@ if __name__ == "__main__":
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
     agent = DataAnalystAgent(model=llm)
 
+    # Save a visual diagram of the graph.
+    agent._compiled_graph.get_graph().draw_mermaid_png(output_file_path="graph.png")
+    print("Graph diagram saved to graph.png")
+
     # Update the CSV path for your local dataset.
     csv_path = "./data/cafe_sales.csv"
 
