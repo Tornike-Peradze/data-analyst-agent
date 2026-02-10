@@ -1,4 +1,7 @@
-"""Orchestrator that chains data-cleaning and EDA sub-graphs."""
+"""Reference implementation — complete orchestrator for learning purposes.
+
+See orchestrator.py for the student version with TODOs to complete.
+"""
 
 import logging
 from typing import Optional, TypedDict
