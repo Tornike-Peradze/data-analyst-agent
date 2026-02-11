@@ -23,6 +23,3 @@ dist/
 
 # Generated graph diagram
 graph.png
-
-# Poetry lockfile (optional for teaching/demo repos)
-poetry.lock
