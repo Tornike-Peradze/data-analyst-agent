@@ -71,6 +71,6 @@ Running `example_usage.py` generates a `graph.png` diagram of the orchestration 
 To enable tracing, set the LangSmith variables in your `.env` file. If they are not set, the pipeline runs normally without tracing.
 
 ## Notes
-- Uses `data_cleaning_agent` and `eda_workflow` internals as-is.
+- Both sub-projects (`data-cleaning-agent` and `eda-workflow`) are linked as **local path dependencies** in `pyproject.toml`. This means they are expected to live in sibling directories (e.g. `../data-cleaning-agent` and `../eda-workflow`). When you run `poetry install`, Poetry resolves them from those local paths rather than from PyPI.
 - A PII guardrail runs before any LLM call and blocks the pipeline if sensitive columns are detected.
 - If cleaning fails, EDA is skipped.
